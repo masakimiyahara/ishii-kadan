@@ -1,0 +1,77 @@
+.intro {
+	background-image: url(../img/bg.png);
+	height: 681px;
+	@include mq('ip') {
+		height: auto;
+		padding-bottom: 20px;
+	}
+	&-wrapper {
+		max-width: 1180px;
+		margin: 0 auto;
+		padding: 0 auto;
+		writing-mode: vertical-rl;
+		@include mq('ip') {
+			writing-mode: inherit;
+		}
+	}
+	&-ttl {
+		font-size: 28px;
+		margin-top: 64px;
+		line-height: 60px;
+		letter-spacing: 0.5em;
+		@include mq('sp') {
+			line-height: 30px;
+		}
+		@include mq('ip') {
+			margin-top: 0px;
+			margin-left: 10px;
+			padding-top: 40px;
+			line-height: 60px;
+		}
+		span {
+			margin-top: 85px;
+		}
+	}
+	&-content {
+		margin-top: 150px;
+		@include mq('ip') {
+			margin-top: 30px;
+			margin-left: 30px;
+		}
+		&_tex {
+			line-height: 38px;
+			letter-spacing: 6px;
+			margin-right: 118px;
+			text-orientation: upright;
+			@include mq('tab') {
+				margin-right: 60px;
+			}
+			@include mq('sp') {
+				margin-right: 30px;
+				line-height: 30px;
+			}
+			@include mq('ip') {
+				margin-top: 20px;
+				margin-right: 0px;
+				line-height: 25px;
+			}
+		}
+		&_name {
+			align-self: flex-end;
+			font-size: 22px;
+			margin-right: 118px;
+			margin-top: 293px;
+			letter-spacing: 10px;
+			@include mq('tab') {
+				margin-right: 60px;
+			}
+			@include mq('sp') {
+				margin-right: 30px;
+			}
+			@include mq('ip') {
+				margin-top: 30px;
+				text-align: right;
+			}
+		}
+	}
+}

@@ -1,0 +1,48 @@
+.recommend {
+	width: 100%;
+	height: auto;
+	background-image: url(../img/bg02.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding-top: 60px;
+	padding-bottom: 144px;
+	@include mq('sp') {
+		padding-bottom: 80px;
+	}
+	&-list {
+		margin-top: 66px;
+		display: flex;
+		justify-content: space-between;
+		@include mq('pc') {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+		@include mq('sp') {
+		flex-flow: column;
+		}
+	}
+
+	&-item {
+		&_img {
+			margin-bottom: 32px;
+		}
+		&_text {
+			line-height: 32px;
+			.bold {
+				font-size: 20px;
+				margin-bottom: 30px;
+			}
+		}
+	}
+	li + li {
+		margin-left: 94px;
+		@include mq('pc') {
+			margin-left: 60px;
+		}
+		@include mq('sp') {
+			margin-left: 0px;
+			margin-top: 40px;
+		}
+	}
+}

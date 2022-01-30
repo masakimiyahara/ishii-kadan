@@ -1,0 +1,40 @@
+.footer {
+	&-wrapper {
+		height: 522px;
+		padding-top: 58px;
+		padding-bottom: 53px;
+		background-image: url(../img/bg3.png);
+		text-align: center;
+	}
+	&-nav {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 96px;
+		&_list {
+			writing-mode: vertical-rl;
+		}
+	}
+	&-item {
+		font-size: 18px;
+		line-height: 3.2;
+		letter-spacing: 14px;
+	}
+	&-logo {
+		text-align: center;
+		margin-bottom: 72px;
+		img {
+			width: 145px;
+			height: 92px;
+		}
+	}
+	&-info {
+		padding-bottom: 23px;
+	}
+	.copyright {
+		height: 60px;
+		background-color: #222;
+		text-align: center;
+		padding-top: 23px;
+		padding-bottom: 23px;
+	}
+}

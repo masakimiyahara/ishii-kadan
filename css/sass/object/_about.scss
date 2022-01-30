@@ -1,0 +1,86 @@
+.about {
+	&-wrapper {
+		padding-top: 106px;
+		padding-bottom: 78px;
+	}
+	&-item {
+		display: flex;
+		@include mq('tab') {
+			flex-flow: column;
+			align-items: center;
+		}
+		&_img {
+			width: 1050px;
+			height: 545px;
+			@include mq('pc') {
+				width: 54%;
+				height: 500px;
+			}
+			@include mq('tab') {
+				width: 90%;
+				height: auto;
+			}
+		}
+		&_content {
+			padding-top: 32px;
+			@include mq('tab') {
+				text-align: center;
+			}
+		}
+		&_ttl {
+			font-size: 36px;
+			line-height: 1.63;
+			margin-bottom: 75px;
+			@include mq('pc') {
+				font-size: 32px;
+			}
+			@include mq('tab') {
+				margin-bottom: 30px;
+			}
+		}
+		p {
+			line-height: 32px;
+		}
+		a {
+			display: inline-block;
+			border: 1px solid #707070;
+			padding: 20px 44px;
+			margin-top: 75px;
+			@include mq('tab') {
+				margin-top: 40px;
+			}
+		}
+	}
+	.odd {
+		.about-item_img {
+			margin-right: 137px;
+			@include mq('pc') {
+				margin-right: 7%;
+			}
+			@include mq('tab') {
+				margin-right: 0px;
+			}
+		}
+	}
+	.even {
+			display: flex;
+			flex-direction: row-reverse;
+			margin-top: 122px;
+			margin-bottom: 122px;
+			@include mq('tab') {
+				flex-flow: column;
+				align-items: center;
+				margin-top: 80px;
+				margin-bottom: 80px;
+			}
+			.about-item_img {
+				margin-left: 174px;
+				@include mq('pc') {
+					margin-left: 7%;
+				}
+				@include mq('tab') {
+					margin-left: 0px;
+				}
+			}
+	}
+}

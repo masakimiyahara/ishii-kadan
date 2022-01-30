@@ -1,0 +1,185 @@
+.header {
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	font-family: 游明朝体, serif;
+	z-index: 10;
+	&.change-color {
+		background-color: #fff;
+	}
+	&-wrapper {
+		max-width: 1920px;
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		margin: 20px;
+		@include mq('sp') {
+			margin: 20px 10px;
+		}
+	}
+	&-logo {
+		margin-right: 120px;
+		@include mq('sp') {
+			margin-right: 0px;
+		}
+		@include mq('ip') {
+			width: 120px;
+		}
+		&_01 {
+			display: block;
+			&.change-color {
+				display: none;
+			}
+		}
+		&_02 {
+			display: none;
+			&.change-color {
+				display: block;
+			}
+		}
+	}
+	&-nav {
+		flex-grow: 1;
+		@include mq('sp') {
+			transform: translateX(100%);
+			transition: .3s;
+			width: 60%;
+			height: 100vh;
+			position: fixed;
+			margin-top: 80px;
+			top: 0;
+			right: -120%;
+			z-index: 10;
+		}
+	}
+	&-nav.slide-in {
+		@include mq('sp') {
+			transform: translateX(0);
+			transition: .3s;
+			right: 0;
+		}
+	}
+	&-nav_wrapper {
+		color: #fff;
+		@include mq('sp') {
+			width: 100%;
+			height: 100%;
+			background-color: #222;
+			z-index: 2;
+		}
+		li + li {
+			margin-left: 30px;
+			@include mq('sp') {
+				margin-left: 0px;
+			}
+		}
+	}
+	&-nav_list {
+		display: flex;
+		text-align: center;
+		font-weight: bold;
+		@include mq('sp') {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			text-align: center;
+			}
+	}
+	&-item {
+		@include mq('sp') {
+			font-size: 25px;
+			margin-bottom: 70px;
+		}
+	}
+	&-item.change-color {
+		color: #000;
+		@include mq('sp') {
+			color: #fff;
+		}
+	}
+	&-btn {
+		background-color: #978F10;
+		color: #fff;
+		padding: 16px 37px 16px 69px;
+		cursor: pointer;
+		@include mq('sp') {
+			margin-left: auto;
+		}
+		@include mq('ip') {
+			padding: 10px 20px 10px 50px;
+		}
+		button {
+			position: relative;
+			&::before {
+				position: absolute;
+				content: url(../img/calender.png);
+				top: -3px;
+				left: -32px;
+			}
+		}
+	}
+	.burger-btn {
+		display: none;
+		@include mq('sp'){
+			position: relative;
+			display: block;
+			width: 40px;
+			height: 28px;
+			cursor: pointer;
+			background-color: transparent;
+			z-index: 10;
+			margin-right: 30px;
+		}
+	}
+	.bar {
+		@include mq('sp') {
+			background-color: #fff;
+			width: 100%;
+			height: 4px;
+			display: block;
+			position: absolute;
+			left: 50%;
+			border-radius: 4px;
+		}
+		&_top {
+			@include mq('sp') {
+				top: 0;
+			}
+		}
+		&_mid {
+			@include mq('sp') {
+				top: 12px;
+			}
+		}
+		&_bottom {
+			@include mq('sp') {
+				bottom: 0;
+			}
+		}
+	}
+	.bar.change-color {
+		@include mq('sp') {
+			background-color: #222;
+		}
+	}
+	.burger-btn.close .bar_top {
+		@include mq('sp') {
+			transform: translateY(12px)rotate(-45deg);
+			transition: transform .3s;
+		}
+	}
+	.burger-btn.close .bar_mid {
+		@include mq('sp') {
+			opacity: 0;
+			transition: opacity .3s;
+		}
+	}
+	.burger-btn.close .bar_bottom {
+		@include mq('sp') {
+			transform: translateY(-12px)rotate(45deg);
+			transition: transform .3s;
+		}
+	}
+}

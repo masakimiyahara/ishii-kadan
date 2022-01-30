@@ -1,0 +1,72 @@
+.modal {
+	width: 550px;
+	background-color: #fff;
+	z-index: 99;
+	position: fixed;
+	top: 45%;
+	left: 50%;
+	margin-top: 50px;
+	transform: translate(-50%, -50%);
+	border: 1px solid #E7E7E7;
+	@include mq('ip') {
+		width: 350px;
+	}
+	&-close {
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+		&_solid {
+			width: 100%;
+			height: 2px;
+			position: absolute;
+			top: 50%;
+			background-color: #000;
+			&:nth-child(1) {
+				transform: rotate(45deg);
+			}
+			&:nth-child(2) {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+&-wrapper {
+	margin: 0 60px;
+	padding-top: 30px;
+	padding-bottom: 90px;
+}
+&-ttl {
+	font-size: 20px;
+	text-align: center;
+	border-bottom: 1px solid #E7E7E7;
+	padding-bottom: 29px;
+	margin-bottom: 35px;
+
+}
+&-form {
+	label {
+		display: block;
+		margin-bottom: 14px;
+	}
+	select {
+		width: 100%;
+		margin-bottom: 14px;
+		border: 1px solid #E7E7E7;
+		padding: 10px 9px;
+	}
+	input {
+		width: 100%;
+		margin-bottom: 14px;
+		border: 1px solid #E7E7E7;
+		padding: 10px 9px;
+	}
+}
+&-btn {
+	padding: 13px 67px;
+	border: 1px solid #707070;
+	display: block;
+	margin: 50px auto 0px;
+	}
+}

@@ -1,0 +1,55 @@
+.access {
+	background-image: url(../img/bg.png);
+	padding-top: 60px;
+	padding-bottom: 110px;
+	&-wrapper {
+		max-width: 1307px;
+		margin: 0 auto;
+		@media screen and (max-width: 1300px) {
+			margin: 0 20px;
+		}
+		iframe {
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+		}
+	}
+	&-content {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 80px;
+		@include mq('tab') {
+			flex-flow: column;
+			margin-bottom: 40px;
+		}
+		&_img {
+			width: 50%;
+			height: 370px;
+			margin-bottom: 69px;
+			@include mq('tab') {
+				width: 100%;
+				height: auto;
+				margin-bottom: 40px;
+			}
+		}
+		&_text {
+			margin-top: 20px;
+			width: 568px;
+			@media screen and (max-width: 1300px) {
+				width: 480px;
+			}
+			@include mq('ip') {
+				width: 400px;
+			}
+		}
+	}
+	&-ttl {
+		font-weight: bold;
+		line-height: 32px;
+		margin-bottom: 8px;
+	}
+	&-desc {
+		line-height: 32px;
+		margin-bottom: 8px;
+	}
+}
